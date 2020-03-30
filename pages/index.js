@@ -1,13 +1,24 @@
 import Head from 'next/head';
-import { useState } from 'react';
-import { differenceInCalendarDays } from 'date-fns';
+import { useEffect, useState } from 'react';
+import { differenceInCalendarDays, formatISO } from 'date-fns';
 
 import DateInput from '../components/DateInput';
 import Results from '../components/Results';
 
 const Home = () => {
   const [startDate, setStartDate] = useState(new Date());
+  const handleStartDate = (startDate) => {
+    localStorage.setItem('startDate', formatISO(startDate));
+    setStartDate(startDate);
+  };
   const elapsedDays = differenceInCalendarDays(new Date(), startDate);
+
+  useEffect(() => {
+    /** NOTE: Since we use SSR, localStorage is not available outside of useEffect */
+    if (localStorage.getItem('startDate')) {
+      setStartDate(new Date(localStorage.getItem('startDate')));
+    }
+  }, [])
 
   return (
     <div className='container'>
@@ -17,7 +28,7 @@ const Home = () => {
       </Head>
 
       <main>
-        <DateInput startDate={startDate} setStartDate={setStartDate} />
+        <DateInput startDate={startDate} handleStartDate={handleStartDate} />
         <Results elapsedDays={elapsedDays} />
       </main>
 
