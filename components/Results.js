@@ -22,15 +22,15 @@ const Results = ({ elapsedDays }) => {
 
   return (
     <AnimatePresence>
-      {elapsedDays && (
+      { elapsedDays && (
         <motion.div
           initial={{ opacity: 0, y: '200px' }}
           animate={{ opacity: 1, y: '0px' }}
           exit={{ opacity: 0, y: '200px' }}
-          style={{ width: '100%', background: 'red' }}>
+          style={{ width: '100%' }}>
           <div className="container">
-            <h3>You've been in quarantine for</h3>
-            <h1>
+            <h3 style={{ margin: 0 }}>You've been in quarantine for</h3>
+            <h1 style={{ margin: 0 }}>
               {' '}
               <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 {elapsedDaysDisplay}
@@ -47,6 +47,7 @@ const Results = ({ elapsedDays }) => {
                 position: absolute;
                 transform: translateX(50%);
                 left: -50%;
+                bottom: -40px;
               }
             `}</style>
           </div>
