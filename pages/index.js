@@ -18,17 +18,18 @@ const Home = () => {
     if (localStorage.getItem('startDate')) {
       setStartDate(new Date(localStorage.getItem('startDate')));
     }
-  }, [])
+  }, []);
 
   return (
-    <div className='container'>
+    <div className="container">
       <Head>
         <title>quarantinometer</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <DateInput startDate={startDate} handleStartDate={handleStartDate} />
+
         <Results elapsedDays={elapsedDays} />
       </main>
 
@@ -71,8 +72,9 @@ const Home = () => {
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+            sans-serif;
         }
 
         * {
@@ -80,7 +82,7 @@ const Home = () => {
         }
       `}</style>
     </div>
-  )
+  );
 };
 
 export default Home;
