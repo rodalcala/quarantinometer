@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const DateInput = ({ startDate, handleStartDate }) => (
   <div className="container">
     <EnterAnimation>
-      <h3>When did your quarantine began?</h3>
+      <h3 style={{textAlign: "center"}}>When did your quarantine began?</h3>
     </EnterAnimation>
     <EnterAnimation delay={0.7}>
       <DatePicker
@@ -23,6 +23,7 @@ const DateInput = ({ startDate, handleStartDate }) => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 50px;
       }
     `}</style>
   </div>

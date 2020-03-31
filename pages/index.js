@@ -40,7 +40,7 @@ const Home = () => {
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
+          min-height: calc(100vh - 50px);
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
@@ -53,9 +53,9 @@ const Home = () => {
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
           align-items: center;
           position: relative;
+          justify-content: center;
         }
 
         footer {
