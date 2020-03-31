@@ -29,7 +29,6 @@ const Home = () => {
 
       <main>
         <DateInput startDate={startDate} handleStartDate={handleStartDate} />
-
         <Results elapsedDays={elapsedDays} />
       </main>
 
@@ -49,13 +48,12 @@ const Home = () => {
         }
 
         main {
-          padding: 5rem 0;
+          padding: 2rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
           align-items: center;
           position: relative;
-          justify-content: center;
         }
 
         footer {

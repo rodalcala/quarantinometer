@@ -2,22 +2,20 @@ import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const Results = ({ elapsedDays }) => {
-  /** NOTE: Changed the return behavior in order to make the animation work properly  */
-
-  //Used to display the elapses day starting from 0
+  // Used to display the elapses day starting from 0
   const [elapsedDaysDisplay, setElapsedDaysDisplay] = useState(0);
 
-  //The time to wait for increasing the elapsedDaysDisplay, it gets longer when it gets closer to the actual elapsedDays value
+  // The time to wait for increasing the elapsedDaysDisplay, it gets longer when it gets closer to the actual elapsedDays value
   const waitingTime =
-    elapsedDaysDisplay >= 20 ? 40 : elapsedDaysDisplay >= 10 ? 70 : 120;
+    elapsedDaysDisplay >= 20 ? 120 : elapsedDaysDisplay >= 10 ? 70 : 40;
 
-  //Increase the elapsedDaysDisplay    
+  // Increase the elapsedDaysDisplay
   setTimeout(() => {
     if (elapsedDaysDisplay >= elapsedDays) return;
     setElapsedDaysDisplay((prev) => prev + 1);
   }, waitingTime);
 
-  //If the actual elapsedDays changes, set the display back to 0
+  // If the actual elapsedDays changes, set the display back to 0
   useEffect(() => {
     setElapsedDaysDisplay(0);
   }, [elapsedDays]);
