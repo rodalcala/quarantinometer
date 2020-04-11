@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const DateInput = ({ startDate, handleStartDate }) => (
   <EnterAnimation>
-    <div className="container">
+    <div className="DateInput-container">
       <h3>When did your quarantine begin?</h3>
       <DatePicker
         inline
@@ -15,7 +15,7 @@ const DateInput = ({ startDate, handleStartDate }) => (
       />
     </div>
     <style jsx>{`
-      .container {
+      .DateInput-container {
         display: flex;
         flex-direction: column;
         justify-content: center;

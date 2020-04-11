@@ -5,7 +5,7 @@ const Results = ({ elapsedDays }) => {
   // Used to display the elapses day starting from 0
   const [elapsedDaysDisplay, setElapsedDaysDisplay] = useState(0);
 
-  // The time to wait for increasing the elapsedDaysDisplay, it gets longer when it gets closer to the actual elapsedDays value
+  // The waiting time to increase the elapsedDaysDisplay gets smaller as it gets closer to the actual elapsedDays value
   const waitingTime =
     elapsedDaysDisplay >= 20 ? 120 : elapsedDaysDisplay >= 10 ? 70 : 40;
 
@@ -30,17 +30,16 @@ const Results = ({ elapsedDays }) => {
           animate={{ opacity: 1, y: '0px' }}
           exit={{ opacity: 0, y: '200px' }}
           style={{ width: '100%' }}>
-          <div className="container">
+          <div className="Results-container">
             <h3 style={{ margin: 0 }}>You've been in quarantine for</h3>
             <h1 style={{ margin: 0 }}>
-              {' '}
               <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 {elapsedDaysDisplay}
               </motion.span>
               {elapsedDaysText}
             </h1>
             <style jsx>{`
-              .container {
+              .Results-container {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
