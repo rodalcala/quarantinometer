@@ -34,7 +34,7 @@ const Results = ({ elapsedDays }) => {
             <h3 style={{ margin: 0 }}>You've been in quarantine for</h3>
             <h1 style={{ margin: 0 }}>
               <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                {elapsedDaysDisplay}
+                {elapsedDaysDisplay <= elapsedDays ? elapsedDaysDisplay : elapsedDays}
               </motion.span>
               {elapsedDaysText}
             </h1>
