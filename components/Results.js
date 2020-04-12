@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
+import comparableEvents from '../assets/comparableTimes.json';
+
 const Results = ({ elapsedDays }) => {
   // Used to display the elapses day starting from 0
   const [elapsedDaysDisplay, setElapsedDaysDisplay] = useState(0);
@@ -22,6 +24,13 @@ const Results = ({ elapsedDays }) => {
 
   const elapsedDaysText = elapsedDays === 1 ? ' day' : ' days';
 
+  const [nearestEvent, setNearestEvent] = useState();
+  useEffect(() => {
+    setNearestEvent(Object.keys(comparableEvents).reduce(
+      (prev, curr) => ((Math.abs(curr - elapsedDays) < Math.abs(prev - elapsedDays)) && curr < elapsedDays) ? curr : prev
+    ));
+  }, [setNearestEvent, elapsedDays])
+
   return (
     <AnimatePresence>
       { elapsedDays && (
@@ -38,6 +47,7 @@ const Results = ({ elapsedDays }) => {
               </motion.span>
               {elapsedDaysText}
             </h1>
+            <h3 className="Results-comparableEventsText">{elapsedDaysDisplay >= elapsedDays && comparableEvents[nearestEvent]}</h3>
             <style jsx>{`
               .Results-container {
                 display: flex;
@@ -48,7 +58,12 @@ const Results = ({ elapsedDays }) => {
                 position: absolute;
                 transform: translateX(50%);
                 left: -50%;
-                bottom: -40px;
+                top: -40px;
+              }
+              .Results-comparableEventsText {
+                margin: 0;
+                margin-top: 10px;
+                text-align: center;
               }
             `}</style>
           </div>
