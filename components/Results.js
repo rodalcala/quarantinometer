@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import comparableEvents from '../assets/comparableTimes.json';
+import comparableEvents from '../assets/comparableEvents.json';
 
 const Results = ({ elapsedDays }) => {
   // Used to display the elapses day starting from 0
