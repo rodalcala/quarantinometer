@@ -18,13 +18,13 @@ const Home = () => {
     if (localStorage.getItem('startDate')) {
       setStartDate(new Date(localStorage.getItem('startDate')));
     }
-  }, [])
+  }, []);
 
   return (
-    <div className='container'>
+    <div className="container">
       <Head>
         <title>quarantinometer</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
@@ -39,7 +39,7 @@ const Home = () => {
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
+          min-height: calc(100vh - 50px);
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
@@ -48,15 +48,17 @@ const Home = () => {
         }
 
         main {
-          padding: 5rem 0;
+          padding: 2rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
           align-items: center;
+          position: relative;
         }
 
         footer {
+          position: absolute;
+          bottom: 0;
           width: 100%;
           height: 50px;
           border-top: 1px solid #eaeaea;
@@ -71,8 +73,10 @@ const Home = () => {
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+          overflow: hidden;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+            sans-serif;
         }
 
         * {
@@ -80,7 +84,7 @@ const Home = () => {
         }
       `}</style>
     </div>
-  )
+  );
 };
 
 export default Home;
