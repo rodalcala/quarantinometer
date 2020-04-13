@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import confetti from 'canvas-confetti';
 
 import comparableEvents from '../assets/comparableEvents.json';
 
@@ -31,6 +32,8 @@ const Results = ({ elapsedDays }) => {
     ));
   }, [setNearestEvent, elapsedDays])
 
+  const launchConfetti = () => elapsedDays && confetti({ origin: { x: 0.5, y: 0.7 } });
+
   return (
     <AnimatePresence>
       { elapsedDays && (
@@ -47,7 +50,7 @@ const Results = ({ elapsedDays }) => {
               </motion.span>
               {elapsedDaysText}
             </h1>
-            <h3 className="Results-comparableEventsText">{elapsedDaysDisplay >= elapsedDays && comparableEvents[nearestEvent]}</h3>
+            <h3 className="Results-comparableEventsText">{elapsedDaysDisplay >= elapsedDays && launchConfetti() && comparableEvents[nearestEvent]}</h3>
             <style jsx>{`
               .Results-container {
                 display: flex;

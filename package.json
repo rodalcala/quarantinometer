@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "canvas-confetti": "^1.2.0",
     "date-fns": "^2.11.1",
     "framer-motion": "^1.10.3",
     "next": "9.3.2",
