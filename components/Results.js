@@ -62,7 +62,7 @@ const Results = ({ elapsedDays }) => {
               }
               .Results-comparableEventsText {
                 margin: 0;
-                margin-top: 10px;
+                margin-top: 15px;
                 text-align: center;
               }
             `}</style>
