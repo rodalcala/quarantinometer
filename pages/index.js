@@ -14,7 +14,7 @@ const Home = () => {
   const elapsedDays = differenceInCalendarDays(new Date(), startDate);
 
   useEffect(() => {
-    /** NOTE: Since we use SSR, localStorage is not available outside of useEffect */
+    /* NOTE: Since we use SSR, localStorage is not available outside of useEffect */
     if (localStorage.getItem('startDate')) {
       setStartDate(new Date(localStorage.getItem('startDate')));
     }
@@ -48,7 +48,7 @@ const Home = () => {
         }
 
         main {
-          padding: 2rem 0;
+          padding: 0.5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;

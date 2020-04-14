@@ -1,26 +1,27 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 
 import comparableEvents from '../assets/comparableEvents.json';
 
 const Results = ({ elapsedDays }) => {
-  // Used to display the elapses day starting from 0
+  /* NOTE: Used to display the elapses day starting from 0 */
   const [elapsedDaysDisplay, setElapsedDaysDisplay] = useState(0);
 
-  // The waiting time to increase the elapsedDaysDisplay gets smaller as it gets closer to the actual elapsedDays value
+  /* NOTE: The waiting time to increase the elapsedDaysDisplay gets smaller as it gets closer to the actual elapsedDays value */
   const waitingTime =
     elapsedDaysDisplay >= 20 ? 120 : elapsedDaysDisplay >= 10 ? 70 : 40;
 
-  // Increase the elapsedDaysDisplay
+  /* NOTE: Increase the elapsedDaysDisplay */
   setTimeout(() => {
     if (elapsedDaysDisplay >= elapsedDays) return;
     setElapsedDaysDisplay((prev) => prev + 1);
   }, waitingTime);
 
-  // If the actual elapsedDays changes, set the display back to 0
+  /* NOTE: If the actual elapsedDays changes, set the display back to 0 and stop the confetti animation */
   useEffect(() => {
     setElapsedDaysDisplay(0);
+    confettiPromise.current && confetti.reset();
   }, [elapsedDays]);
 
   const elapsedDaysText = elapsedDays === 1 ? ' day' : ' days';
@@ -28,11 +29,19 @@ const Results = ({ elapsedDays }) => {
   const [nearestEvent, setNearestEvent] = useState();
   useEffect(() => {
     setNearestEvent(Object.keys(comparableEvents).reduce(
+      /* NOTE: Find the nearest event on the array that doesn't exceed the amount of elapsedDays */
       (prev, curr) => ((Math.abs(curr - elapsedDays) < Math.abs(prev - elapsedDays)) && curr < elapsedDays) ? curr : prev
     ));
-  }, [setNearestEvent, elapsedDays])
+  }, [setNearestEvent, elapsedDays]);
 
-  const launchConfetti = () => elapsedDays && confetti({ origin: { x: 0.5, y: 0.7 } });
+  const confettiPromise = useRef(null);
+  const launchConfetti = () => {
+    /* NOTE: If the elapsedDaysDisplay as reached its goal, launch confetti and return true so the comparable event can be rendered */
+    if (elapsedDaysDisplay >= elapsedDays) {
+      confettiPromise.current = confetti({ origin: { x: 0.5, y: 0.7 } });
+      return true;
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -50,7 +59,7 @@ const Results = ({ elapsedDays }) => {
               </motion.span>
               {elapsedDaysText}
             </h1>
-            <h3 className="Results-comparableEventsText">{elapsedDaysDisplay >= elapsedDays && launchConfetti() && comparableEvents[nearestEvent]}</h3>
+            <h3 className="Results-comparableEventsText">{launchConfetti() && comparableEvents[nearestEvent]}</h3>
             <style jsx>{`
               .Results-container {
                 display: flex;
