@@ -10,7 +10,11 @@ const Results = ({ elapsedDays }) => {
 
   /* NOTE: The waiting time to increase the elapsedDaysDisplay gets smaller as it gets closer to the actual elapsedDays value */
   const waitingTime =
-    elapsedDaysDisplay >= 20 ? 120 : elapsedDaysDisplay >= 10 ? 70 : 40;
+    elapsedDaysDisplay >= elapsedDays - 20
+      ? 120
+      : elapsedDaysDisplay >= elapsedDays - 10
+        ? 70
+        : 40;
 
   /* NOTE: Increase the elapsedDaysDisplay */
   setTimeout(() => {
