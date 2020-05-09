@@ -1,12 +1,14 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { differenceInCalendarDays, formatISO } from 'date-fns';
+import { Modal } from 'react-responsive-modal';
 
 import DateInput from '../components/DateInput';
 import Results from '../components/Results';
 
 const Home = () => {
   const [startDate, setStartDate] = useState(new Date());
+  const [locationModalOpen, setLocationModalOpen] = useState(false);
   const handleStartDate = (startDate) => {
     localStorage.setItem('startDate', formatISO(startDate));
     setStartDate(startDate);
@@ -18,6 +20,11 @@ const Home = () => {
     if (localStorage.getItem('startDate')) {
       setStartDate(new Date(localStorage.getItem('startDate')));
     }
+    /* NOTE: If we haven't asked for geolocation permissions, open the modal */
+    if (!localStorage.getItem('locationAsked')) {
+      setLocationModalOpen(true);
+      localStorage.setItem('locationAsked', true);
+    }
   }, []);
 
   return (
@@ -27,7 +34,11 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
       <main>
+        <Modal open={locationModalOpen} onClose={() => setLocationModalOpen(false)} center>
+          TUVIEJA
+        </Modal>
         <DateInput startDate={startDate} handleStartDate={handleStartDate} />
         <Results elapsedDays={elapsedDays} />
       </main>
