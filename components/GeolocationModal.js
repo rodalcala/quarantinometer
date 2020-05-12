@@ -21,21 +21,52 @@ const GeolocationModal = ({ setStartDate, setLocationModalOpen }) => {
       <div className="GeolocationModal-container">
         <h3>Would you like to share your location so we can determine when did your quarantine begin?</h3>
         <div className="GeolocationModal-buttonsContainer">
-          <a onClick={() => navigator.geolocation.getCurrentPosition(setStartDateByLocation)}>
+          <a className="GeolocationModal-yesButton" onClick={() => navigator.geolocation.getCurrentPosition(setStartDateByLocation)}>
             Yes!
           </a>
-          <a>I prefer to input the date manually</a>
+          <a className="GeolocationModal-cancelButton" onClick={() => setLocationModalOpen(false)}>
+            I prefer to input the date manually
+          </a>
         </div>
       </div>
       <style jsx>{`
         .GeolocationModal-container {
           margin: 0 auto;
+          margin-bottom: 1em;
           width: 90%;
           max-width: 500px;
         }
         .GeolocationModal-buttonsContainer {
           display: flex;
           flex-direction: column;
+          align-items: flex-start;
+        }
+        .GeolocationModal-yesButton {
+          padding: 0.2em 0.4em;
+          border-radius: 0.3em;
+          font-size: 18px;
+          color: #FFF;
+          background-color: #216BA5;
+          cursor: pointer;
+        }
+        .GeolocationModal-yesButton:hover {
+          background-color: #1D5D90;
+        }
+        .GeolocationModal-yesButton:active {
+          transform: translateY(1px);
+          filter: saturate(150%);
+        }
+        .GeolocationModal-cancelButton {
+          font-size: 14px;
+          padding-top: 0.4em;
+          cursor: pointer;
+        }
+        .GeolocationModal-cancelButton:hover {
+          text-decoration: underline;
+        }
+        .GeolocationModal-cancelButton:active {
+          transform: translateY(1px);
+          filter: saturate(150%);
         }
       `}</style>
     </div>
