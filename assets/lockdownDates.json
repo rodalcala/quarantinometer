@@ -1,0 +1,620 @@
+[
+  {
+    "country": "Albania",
+    "startDate": "2020-03-13",
+    "endDate": "",
+    "level": "National"
+  },
+  {
+    "country": "Algeria",
+    "startDate": "2020-03-23",
+    "endDate": "2020-04-19",
+    "level": "City"
+  },
+  {
+    "country": "Argentina",
+    "startDate": "2020-03-19",
+    "endDate": "2020-05-10",
+    "level": "National"
+  },
+  {
+    "country": "Armenia",
+    "startDate": "2020-03-24",
+    "endDate": "2020-04-14",
+    "level": "National"
+  },
+  {
+    "country": "Australia",
+    "startDate": "2020-03-23",
+    "endDate": "",
+    "level": "National"
+  },
+  {
+    "country": "Austria",
+    "startDate": "2020-03-16",
+    "endDate": "2020-04-13",
+    "level": "National"
+  },
+  {
+    "country": "Azerbaijan",
+    "startDate": "2020-03-31",
+    "endDate": "2020-04-20",
+    "level": "National"
+  },
+  {
+    "country": "Bangladesh",
+    "startDate": "2020-03-26",
+    "endDate": "2020-04-25",
+    "level": "National"
+  },
+  {
+    "country": "Barbados",
+    "startDate": "2020-03-28",
+    "endDate": "2020-05-03",
+    "level": "National"
+  },
+  {
+    "country": "Belgium",
+    "startDate": "2020-03-18",
+    "endDate": "2020-04-19",
+    "level": "National"
+  },
+  {
+    "country": "Bermuda",
+    "startDate": "2020-04-04",
+    "endDate": "2020-05-02",
+    "level": "National"
+  },
+  {
+    "country": "Bolivia",
+    "startDate": "2020-03-22",
+    "endDate": "2020-04-15",
+    "level": "National"
+  },
+  {
+    "country": "Botswana",
+    "startDate": "2020-04-02",
+    "endDate": "2020-04-30",
+    "level": "National"
+  },
+  {
+    "country": "Brazil",
+    "startDate": "2020-03-17",
+    "endDate": "2020-04-07",
+    "level": "State"
+  },
+  {
+    "country": "Chile",
+    "startDate": "2020-03-19",
+    "endDate": "",
+    "level": "National"
+  },
+  {
+    "country": "Colombia",
+    "startDate": "2020-03-25",
+    "endDate": "2020-05-11",
+    "level": "National"
+  },
+  {
+    "country": "Republic of the Congo",
+    "startDate": "2020-03-31",
+    "endDate": "2020-04-20",
+    "level": "National"
+  },
+  {
+    "country": "Costa Rica",
+    "startDate": "2020-03-23",
+    "endDate": "",
+    "level": "National"
+  },
+  {
+    "country": "Croatia",
+    "startDate": "2020-03-18",
+    "endDate": "2020-04-19",
+    "level": "National"
+  },
+  {
+    "country": "Cuba",
+    "startDate": "2020-03-23",
+    "endDate": "2020-04-20",
+    "level": "National"
+  },
+  {
+    "country": "Czech Republic",
+    "startDate": "2020-03-16",
+    "endDate": "2020-04-12",
+    "level": "National"
+  },
+  {
+    "country": "Denmark",
+    "startDate": "2020-03-11",
+    "endDate": "2020-04-13",
+    "level": "National"
+  },
+  {
+    "country": "Dominican Republic",
+    "startDate": "2020-03-19",
+    "endDate": "",
+    "level": "National"
+  },
+  {
+    "country": "Ecuador",
+    "startDate": "2020-03-16",
+    "endDate": "2020-03-31",
+    "level": "National"
+  },
+  {
+    "country": "El Salvador",
+    "startDate": "2020-03-12",
+    "endDate": "2020-04-02",
+    "level": "National"
+  },
+  {
+    "country": "Eritrea",
+    "startDate": "2020-04-02",
+    "endDate": "2020-04-23",
+    "level": "National"
+  },
+  {
+    "country": "Fiji",
+    "startDate": "2020-03-20",
+    "endDate": "2020-04-07",
+    "level": "City"
+  },
+  {
+    "country": "Finland",
+    "startDate": "2020-03-27",
+    "endDate": "2020-04-16",
+    "level": "Region"
+  },
+  {
+    "country": "France",
+    "startDate": "2020-03-17",
+    "endDate": "2020-05-11",
+    "level": "National"
+  },
+  {
+    "country": "Georgia",
+    "startDate": "2020-03-31",
+    "endDate": "2020-04-21",
+    "level": "National"
+  },
+  {
+    "country": "Germany",
+    "startDate": "2020-03-23",
+    "endDate": "2020-04-20",
+    "level": "National"
+  },
+  {
+    "country": "Ghana",
+    "startDate": "2020-03-30",
+    "endDate": "2020-04-12",
+    "level": "Metropolitan Area"
+  },
+  {
+    "country": "Greece",
+    "startDate": "2020-03-23",
+    "endDate": "2020-05-04",
+    "level": "National"
+  },
+  {
+    "country": "Guernsey",
+    "startDate": "2020-03-25",
+    "endDate": "",
+    "level": "National"
+  },
+  {
+    "country": "Honduras",
+    "startDate": "2020-03-20",
+    "endDate": "2020-05-17",
+    "level": "National"
+  },
+  {
+    "country": "Hungary",
+    "startDate": "2020-03-28",
+    "endDate": "2020-04-10",
+    "level": "National"
+  },
+  {
+    "country": "India",
+    "startDate": "2020-03-25",
+    "endDate": "2020-05-18",
+    "level": "National"
+  },
+  {
+    "country": "Iraq",
+    "startDate": "2020-03-22",
+    "endDate": "2020-04-11",
+    "level": "National"
+  },
+  {
+    "country": "Ireland",
+    "startDate": "2020-03-12",
+    "endDate": "2020-05-18",
+    "level": "National"
+  },
+  {
+    "country": "Israel",
+    "startDate": "2020-04-02",
+    "endDate": "",
+    "level": "City"
+  },
+  {
+    "country": "Italy",
+    "startDate": "2020-03-09",
+    "endDate": "2020-05-03",
+    "level": "National"
+  },
+  {
+    "country": "Jamaica",
+    "startDate": "2020-04-15",
+    "endDate": "2020-04-22",
+    "level": "Parish"
+  },
+  {
+    "country": "Jordan",
+    "startDate": "2020-03-18",
+    "endDate": "2020-04-30",
+    "level": "National"
+  },
+  {
+    "country": "Kosovo",
+    "startDate": "2020-03-14",
+    "endDate": "2020-05-04 ",
+    "level": "National"
+  },
+  {
+    "country": "Kuwait",
+    "startDate": "2020-03-14",
+    "endDate": "2020-03-29",
+    "level": "National"
+  },
+  {
+    "country": "Lebanon",
+    "startDate": "2020-03-15",
+    "endDate": "2020-03-28",
+    "level": "National"
+  },
+  {
+    "country": "Liberia",
+    "startDate": "2020-03-23",
+    "endDate": "2020-04-11",
+    "level": "County"
+  },
+  {
+    "country": "Libya",
+    "startDate": "2020-03-22",
+    "endDate": "",
+    "level": "National"
+  },
+  {
+    "country": "Lithuania",
+    "startDate": "2020-03-16",
+    "endDate": "2020-04-27",
+    "level": "National"
+  },
+  {
+    "country": "Luxembourg",
+    "startDate": "2020-03-18",
+    "endDate": "2020-04-20 to",
+    "level": "National"
+  },
+  {
+    "country": "Madagascar",
+    "startDate": "2020-03-23",
+    "endDate": "",
+    "level": "City"
+  },
+  {
+    "country": "Malaysia",
+    "startDate": "2020-03-18",
+    "endDate": "2020-05-12",
+    "level": "National"
+  },
+  {
+    "country": "Mongolia",
+    "startDate": "2020-03-10",
+    "endDate": "2020-03-16",
+    "level": "National"
+  },
+  {
+    "country": "Montenegro",
+    "startDate": "2020-03-24",
+    "endDate": "",
+    "level": "Municipality"
+  },
+  {
+    "country": "Morocco",
+    "startDate": "2020-03-19",
+    "endDate": "2020-04-20",
+    "level": "National"
+  },
+  {
+    "country": "Namibia",
+    "startDate": "2020-03-27",
+    "endDate": "2020-05-04",
+    "level": "National"
+  },
+  {
+    "country": "Nepal",
+    "startDate": "2020-03-24",
+    "endDate": "2020-04-15",
+    "level": "National"
+  },
+  {
+    "country": "Netherlands",
+    "startDate": "2020-03-16",
+    "endDate": "2020-04-28",
+    "level": "National"
+  },
+  {
+    "country": "New Zealand",
+    "startDate": "2020-03-26",
+    "endDate": "2020-05-10",
+    "level": "National"
+  },
+  {
+    "country": "Nigeria",
+    "startDate": "2020-03-30",
+    "endDate": "2020-04-12",
+    "level": "City"
+  },
+  {
+    "country": "Northern Cyprus",
+    "startDate": "2020-03-30",
+    "endDate": "",
+    "level": "National"
+  },
+  {
+    "country": "Norway",
+    "startDate": "2020-03-12",
+    "endDate": "2020-04-13",
+    "level": "National"
+  },
+  {
+    "country": "Oman",
+    "startDate": "2020-04-10",
+    "endDate": "2020-05-29",
+    "level": "Governorate"
+  },
+  {
+    "country": "Jalan Bani Bu Ali",
+    "startDate": "2020-04-16",
+    "endDate": "TBD",
+    "level": "Province"
+  },
+  {
+    "country": "Pakistan",
+    "startDate": "2020-03-24",
+    "endDate": "2020-05-09",
+    "level": "National"
+  },
+  {
+    "country": "Panama",
+    "startDate": "2020-03-25",
+    "endDate": "",
+    "level": "National"
+  },
+  {
+    "country": "Papua New Guinea",
+    "startDate": "2020-03-24",
+    "endDate": "2020-04-07",
+    "level": "National"
+  },
+  {
+    "country": "Paraguay",
+    "startDate": "2020-03-20",
+    "endDate": "2020-04-12",
+    "level": "National"
+  },
+  {
+    "country": "Peru",
+    "startDate": "2020-03-16",
+    "endDate": "2020-05-10",
+    "level": "National"
+  },
+  {
+    "country": "Philippines",
+    "startDate": "2020-03-27",
+    "endDate": "2020-05-15",
+    "level": "Province"
+  },
+  {
+    "country": "Davao Region",
+    "startDate": "2020-03-19",
+    "endDate": "2020-05-15",
+    "level": "Region"
+  },
+  {
+    "country": "Luzon",
+    "startDate": "2020-03-15",
+    "endDate": "2020-04-30",
+    "level": "Island group"
+  },
+  {
+    "country": "Soccsksargen",
+    "startDate": "2020-03-23",
+    "endDate": "",
+    "level": "Region"
+  },
+  {
+    "country": "Poland",
+    "startDate": "2020-03-13",
+    "endDate": "2020-04-11",
+    "level": "National"
+  },
+  {
+    "country": "Portugal",
+    "startDate": "2020-03-19",
+    "endDate": "2020-04-02",
+    "level": "National"
+  },
+  {
+    "country": "Qatar",
+    "startDate": "2020-03-11",
+    "endDate": "",
+    "level": "Industrial park"
+  },
+  {
+    "country": "Romania",
+    "startDate": "2020-03-25",
+    "endDate": "2020-05-12",
+    "level": "National"
+  },
+  {
+    "country": "Russia",
+    "startDate": "2020-03-30",
+    "endDate": "2020-05-12",
+    "level": "Metropolitan area"
+  },
+  {
+    "country": "[h]",
+    "startDate": "2020-03-28",
+    "endDate": "2020-04-30",
+    "level": "National"
+  },
+  {
+    "country": "Rwanda",
+    "startDate": "2020-03-21",
+    "endDate": "2020-04-19",
+    "level": "National"
+  },
+  {
+    "country": "Samoa",
+    "startDate": "2020-03-26",
+    "endDate": "2020-04-08",
+    "level": "National"
+  },
+  {
+    "country": "San Marino",
+    "startDate": "2020-03-14",
+    "endDate": "2020-05-05",
+    "level": "National"
+  },
+  {
+    "country": "Saudi Arabia",
+    "startDate": "2020-03-29",
+    "endDate": "",
+    "level": "City"
+  },
+  {
+    "country": "Serbia",
+    "startDate": "2020-03-15",
+    "endDate": "2020-04-21",
+    "level": "National"
+  },
+  {
+    "country": "Singapore",
+    "startDate": "2020-04-07",
+    "endDate": "2020-06-01",
+    "level": "National"
+  },
+  {
+    "country": "Slovakia",
+    "startDate": "2020-03-16",
+    "endDate": "2020-04-22",
+    "level": "National"
+  },
+  {
+    "country": "South Africa",
+    "startDate": "2020-03-26",
+    "endDate": "2020-04-30",
+    "level": "National"
+  },
+  {
+    "country": "Spain",
+    "startDate": "2020-03-14",
+    "endDate": "2020-05-09",
+    "level": "National"
+  },
+  {
+    "country": "Switzerland",
+    "startDate": "2020-03-17",
+    "endDate": "2020-04-27",
+    "level": "National"
+  },
+  {
+    "country": "Thailand",
+    "startDate": "2020-03-25",
+    "endDate": "2020-05-31",
+    "level": "National"
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "startDate": "2020-03-17",
+    "endDate": "2020-03-31",
+    "level": "National"
+  },
+  {
+    "country": "Tunisia",
+    "startDate": "2020-03-22",
+    "endDate": "2020-04-19",
+    "level": "National"
+  },
+  {
+    "country": "Turkey",
+    "startDate": "2020-04-23",
+    "endDate": "2020-04-27",
+    "level": "National"
+  },
+  {
+    "country": "Ukraine",
+    "startDate": "2020-03-17",
+    "endDate": "2020-04-24",
+    "level": "National"
+  },
+  {
+    "country": "United Arab Emirates",
+    "startDate": "2020-03-26",
+    "endDate": "2020-04-17",
+    "level": "National"
+  },
+  {
+    "country": "United Kingdom",
+    "startDate": "2020-03-23",
+    "endDate": "",
+    "level": "National"
+  },
+  {
+    "country": "United States",
+    "startDate": "2020-03-19",
+    "endDate": "",
+    "level": "State"
+  },
+  {
+    "country": "Clark County",
+    "startDate": "2020-03-20",
+    "endDate": "",
+    "level": "County"
+  },
+  {
+    "country": "Connecticut",
+    "startDate": "2020-03-23",
+    "endDate": "2020-04-22",
+    "level": "State"
+  },
+  {
+    "country": "Kansas City",
+    "startDate": "2020-03-24",
+    "endDate": "2020-04-19",
+    "level": "City"
+  },
+  {
+    "country": "Massachusetts",
+    "startDate": "2020-03-24",
+    "endDate": "2020-05-04",
+    "level": "State"
+  },
+  {
+    "country": "Venezuela",
+    "startDate": "2020-03-17",
+    "endDate": "2020-05-13",
+    "level": "National"
+  },
+  {
+    "country": "Zimbabwe",
+    "startDate": "2020-03-30",
+    "endDate": "2020-05-02",
+    "level": "National"
+  }
+]
