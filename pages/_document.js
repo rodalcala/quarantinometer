@@ -24,8 +24,6 @@ export default class extends Document {
           `,
             }}
           />
-          <title>quarantinometer</title>
-          <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />
