@@ -31,11 +31,6 @@ const Home = () => {
 
   return (
     <div className="container">
-      <Head>
-        <title>quarantinometer</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main>
         <Modal showCloseIcon={false} open={locationModalOpen} onClose={() => setLocationModalOpen(false)} center>
           <GeolocationModal setStartDate={handleStartDate} setLocationModalOpen={setLocationModalOpen} />
