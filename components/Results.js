@@ -4,7 +4,7 @@ import confetti from 'canvas-confetti';
 
 import comparableEvents from '../assets/comparableEvents.json';
 
-const Results = ({ elapsedDays }) => {
+const Results = ({ elapsedDays, comparableEvent, setComparableEvent }) => {
   /* NOTE: Used to display the elapses day starting from 0 */
   const [elapsedDaysDisplay, setElapsedDaysDisplay] = useState(0);
 
@@ -30,13 +30,13 @@ const Results = ({ elapsedDays }) => {
 
   const elapsedDaysText = elapsedDays === 1 ? ' day' : ' days';
 
-  const [nearestEvent, setNearestEvent] = useState();
   useEffect(() => {
-    setNearestEvent(Object.keys(comparableEvents).reduce(
+    const comparableEventKey = Object.keys(comparableEvents).reduce(
       /* NOTE: Find the nearest event on the array that doesn't exceed the amount of elapsedDays */
       (prev, curr) => ((Math.abs(curr - elapsedDays) < Math.abs(prev - elapsedDays)) && curr < elapsedDays) ? curr : prev
-    ));
-  }, [setNearestEvent, elapsedDays]);
+    );
+    setComparableEvent(comparableEvents[comparableEventKey]);
+  }, [setComparableEvent, elapsedDays]);
 
   const confettiPromise = useRef(null);
   const launchConfetti = () => {
@@ -63,7 +63,7 @@ const Results = ({ elapsedDays }) => {
               </motion.span>
               {elapsedDaysText}
             </h1>
-            <h3 className="Results-comparableEventsText">{launchConfetti() && comparableEvents[nearestEvent]}</h3>
+            <h3 className="Results-comparableEventsText">{launchConfetti() && comparableEvent}</h3>
             <style jsx>{`
               .Results-container {
                 display: flex;
