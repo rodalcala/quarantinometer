@@ -6,10 +6,12 @@ import { Modal } from 'react-responsive-modal';
 import DateInput from '../components/DateInput';
 import Results from '../components/Results';
 import GeolocationModal from '../components/GeolocationModal';
+import ShareBar from '../components/ShareBar';
 
 const Home = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [locationModalOpen, setLocationModalOpen] = useState(false);
+  const [comparableEvent, setComparableEvent] = useState();
 
   const handleStartDate = (startDate) => {
     localStorage.setItem('startDate', formatISO(startDate));
@@ -41,12 +43,13 @@ const Home = () => {
           <GeolocationModal setStartDate={handleStartDate} setLocationModalOpen={setLocationModalOpen} />
         </Modal>
         <DateInput startDate={startDate} handleStartDate={handleStartDate} />
-        <Results elapsedDays={elapsedDays} />
+        <Results comparableEvent={comparableEvent} setComparableEvent={setComparableEvent} elapsedDays={elapsedDays} />
       </main>
 
       <footer>
         {/* TODO: Improve emojis accessibility */}
-        With 💞 from 🏡
+        <p className={'footer-text'}>With 💞 from 🏡</p>
+        <ShareBar elapsedDays={elapsedDays} comparableEvent={comparableEvent} />
       </footer>
 
       <style jsx>{`
@@ -73,10 +76,16 @@ const Home = () => {
           bottom: 0;
           width: 100%;
           height: 50px;
+          padding: 20px;
           border-top: 1px solid #eaeaea;
           display: flex;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
+        }
+
+        .footer-text {
+          font-size: 14px;
+          color: grey;
         }
       `}</style>
 
